@@ -4,11 +4,141 @@
   <meta charset="utf-8">
   <title>zvn esports</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #151515, #080808);
+      color: #e6e6e6;
+      min-height: 100vh;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 50px;
+      border-bottom: 1px solid #1f1f1f;
+    }
+
+    .logo {
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+    }
+
+    nav a {
+      color: #aaa;
+      text-decoration: none;
+      margin-left: 25px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 120px 20px;
+    }
+
+    .hero h1 {
+      font-size: 3.6rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      color: #b5b5b5;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 14px 34px;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      border: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, #6b6bff, #8b8bff);
+      color: #000;
+    }
+
+    .btn.primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(107,107,255,0.35);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 2px solid #6b6bff;
+      color: #6b6bff;
+    }
+
+    .btn.secondary:hover {
+      background: #6b6bff;
+      color: #000;
+    }
+
+    .signup {
+      background: #0c0c0c;
+      border-top: 1px solid #1f1f1f;
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .signup h2 {
+      font-size: 2.3rem;
+      margin-bottom: 15px;
+    }
+
+    .signup p {
+      color: #9a9a9a;
+      margin-bottom: 30px;
+    }
+
+    footer {
+      border-top: 1px solid #1f1f1f;
+      padding: 30px;
+      text-align: center;
+      color: #777;
+    }
+
+    footer a {
+      color: #777;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+  </style>
 </head>
 <body>
 
-  <header class="navbar">
+  <header>
     <div class="logo">zvn esports</div>
     <nav>
       <a href="something.html">home</a>
@@ -19,30 +149,38 @@
     </nav>
   </header>
 
-  <main class="hero">
-    <h1>dominate the game.</h1>
-    <p>zvn esports is a competitive gaming organization built on skill, grit, and obsession.</p>
+  <section class="hero">
+    <h1>dominate.</h1>
+    <p>
+      zvn esports is a competitive organization built for players
+      who grind harder, play smarter, and win louder.
+    </p>
 
     <div class="buttons">
-      <a class="btn primary" href="something.html">join zvn</a>
-      <a class="btn secondary" href="something.html">discord</a>
+      <button class="btn primary" onclick="go()">join zvn</button>
+      <button class="btn secondary" onclick="go()">discord</button>
     </div>
-  </main>
-
-  <section class="signup">
-    <h2>player sign up</h2>
-    <p>think you have what it takes? prove it.</p>
-
-    <a class="btn primary" href="something.html">sign up now</a>
   </section>
 
-  <footer class="footer">
-    <p>© 2026 zvn esports. all rights reserved.</p>
-    <div class="footer-links">
+  <section class="signup">
+    <h2>player signup</h2>
+    <p>ready to prove yourself? step up.</p>
+    <button class="btn primary" onclick="go()">sign up now</button>
+  </section>
+
+  <footer>
+    <p>© 2026 zvn esports</p>
+    <div>
       <a href="privacy.html">privacy policy</a>
       <a href="dmca.html">dmca</a>
     </div>
   </footer>
+
+  <script>
+    function go() {
+      window.location.href = "something.html";
+    }
+  </script>
 
 </body>
 </html>
